@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+.carousel-indicators {
+  bottom: -10px;
+}
+.carousel-indicators li {
+  background-color: #ca82ff;
+}
+
+.carousel-indicators .active {
+  background-color: #980cff;
+}
+em {
+  color: #ca82ff;
+}
+
+@media screen and (max-width: 768px) {
+  .pull-right {
+    float: none !important;
+  }
+  .carousel-indicators {
+    bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1360px;
+  }
+}

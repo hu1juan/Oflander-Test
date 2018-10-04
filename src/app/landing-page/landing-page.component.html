@@ -1,0 +1,107 @@
+<section id="main">
+    <div class="container">
+        <div class="porfollio-filter">
+            <button (click)="filter()" [ngClass]="{setActive:!setActive}">All</button>
+            <button (click)="filter(cat) " *ngFor="let cat of categories" [ngClass]="{setActive:cat.name === setActive}">{{ cat.name }}</button>
+
+        </div>
+        <div class="masonry">
+            <a href="{{item.link}}" target="_blank" class="brick animated flipInY" *ngFor="let item of portfolio">
+                <div class="portfolio-image" [ngStyle]="setBackground('http://13.75.89.123:8081/portfolio/media/'+item.image)"></div>
+                <h3 class="title">{{ item.title }}</h3>
+            </a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="testi-separator">
+        <h2>TESTIMONIALS</h2>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="col-md-6 testi">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <p>‘‘ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum. ’’</p>
+                        <div>
+                            <img src="data:image/jpeg;base64,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">
+                            <div class="pull-right">
+                                <h4>Daniel Padilla</h4>
+                                <span>ACTOR/ARTIST -
+                                    <em>ABS-CBN Corporation</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <p>‘‘ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum. ’’</p>
+                        <div>
+                            <img src="https://www.animepilipinas.com/wp-content/uploads/2016/03/Alden-Richards-696x464.jpg">
+                            <div class="pull-right">
+                                <h4>Alden Richards</h4>
+                                <span>ACTOR/ARTIST -
+                                    <em>GMA Network</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <p>‘‘ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum. ’’</p>
+                        <div>
+                            <img src="data:image/jpeg;base64,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">
+                            <div class="pull-right">
+                                <h4>James Reid</h4>
+                                <span>ACTOR/ARTIST -
+                                    <em>ABS-CBN Corporation</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <li>
+                    <img class="clients-img img-responsive" src="./assets/img/loanmarket-logo.svg" alt="">
+                </li>
+                <li>
+                    <img class="clients-img img-responsive" src="./assets/img/awesome_hr-logo.png" alt="">
+                </li>
+                <li>
+                    <img class="clients-img img-responsive" src="./assets/img/NZFSG-logo.svg" alt="">
+                </li>
+                <li>
+                    <img class="clients-img img-responsive" src="./assets/img/mortgage_direct-logo.png" alt="">
+                </li>
+                <li>
+                    <img class="clients-img img-responsive" src="./assets/img/blackfin_logo.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h5 class="my-footer">© Copyright 2017 John Jeffritz S. Mangmang</h5>
+</section>

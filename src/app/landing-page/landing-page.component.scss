@@ -1,0 +1,148 @@
+$dp-orange: #ca82ff;
+.porfollio-filter {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+  .setActive {
+    background-color: #ca82ff;
+    color: #fff;
+  }
+  button {
+    background-color: #fff;
+    color: #8b8b8b;
+    cursor: pointer;
+    font: 400 12px 'Open Sans', sans-serif;
+    padding: 7px 12px;
+    position: relative;
+    overflow: visible;
+    margin: 10px 0 0 5px;
+    border: 1px solid #e4e2e2;
+    text-transform: uppercase;
+    display: inline-block;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: $dp-orange;
+      border-color: $dp-orange;
+      color: #222;
+    }
+  }
+  margin: 20px 0;
+}
+.masonry {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+  .brick {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    flex: auto;
+    height: 250px;
+    overflow: hidden;
+    min-width: 150px;
+    margin: 30px;
+    width: 250px;
+    max-width: 250px;
+    position: relative;
+    background-size: cover;
+    > .portfolio-image {
+      border: 2px solid #ca82ff;
+      border-radius: 15px;
+      position: absolute;
+      z-index: 99;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      top: 0;
+      left: 0;
+      background-position: center;
+    }
+    &:hover > .portfolio-image {
+      -webkit-animation: background-animation 0.2s forwards;
+      animation: background-animation 0.2s forwards;
+      border-radius: 0px;
+    }
+    .title {
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      z-index: 95;
+      margin: 0;
+      padding: 13px 0;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      background: #272727;
+      color: #fff;
+    }
+  }
+
+  @-webkit-keyframes background-animation {
+    from {
+      top: 0px;
+    }
+    to {
+      top: -50px;
+    }
+  }
+
+  @keyframes background-animation {
+    from {
+      top: 0px;
+    }
+    to {
+      top: -50px;
+    }
+  }
+}
+
+.testi-separator {
+  text-align: center;
+  background: #ca82ff;
+  color: #fff;
+  padding: 1px;
+}
+.testi {
+  margin-bottom: 20px;
+  p {
+    padding: 30px 20px;
+    color: black;
+    border: 1px solid #ca82ff;
+    background: #fff;
+    text-align: center;
+  }
+  img {
+    display: inline-block;
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+  li {
+    padding: 5px 15px;
+    .clients-img {
+      width: 150px;
+      height: 50px;
+      &:hover {
+        animation: tada 1s;
+      }
+    }
+  }
+}
+.my-footer {
+  background: #272727;
+  color: #fff;
+  text-align: center;
+  padding: 40px 25px;
+  margin-bottom: 0;
+}
+#main {
+  min-height: 100vh;
+}
